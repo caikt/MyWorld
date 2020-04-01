@@ -1,0 +1,619 @@
+/* CSS Document */
+body{
+	background:url(../images/index/background.jpg);
+	background-position: center;
+	background-attachment:fixed;
+	background-repeat:no-repeat ;
+	background-size:100% 100%;
+}
+h2{
+	font-size:36px;
+	font-weight:bold;
+	font-family:"华文琥珀";
+}
+/*banner begin*/
+.banner{/*焦点栏大方块*/
+	margin:13px auto 15px auto;/*上外边距13px......*/
+	padding:0;/*清除内边距*/
+	text-align:left;
+	width:1500px;
+	height:532px;     
+	overflow:hidden;/*溢出内容被修剪，且不可见*/
+}
+
+.banner .left{/*焦点栏左侧*/
+	margin:0;/*清除外边距*/
+	padding:0;/*清除内边距*/
+	width:1295px;
+	height:530px;
+	background:url(../images/index/banner/banner_left.png) no-repeat;
+	float:left;
+	position:relative;/*相对定位*/
+	font-family:Arial, Helvetica, sans-serif, "黑体";
+	font-weight:bold;
+}
+.content_left{/*焦点栏左侧内部内容方块*/
+	position: absolute;/*绝对定位*/
+	top: 48px;/*距焦点栏左侧顶部63px*/
+	right: 44px;/*距焦点栏左侧右部42px*/
+	color: #FFF;/*字体颜色*/
+	text-align: right;
+}
+.school_en{
+	font-size:48px;
+}
+.school_ch{
+	font-size:24px;
+	font-family:"黑体";
+	background:no-repeat right center;
+	padding-right:10px;
+}
+.advertise{
+	margin-top:36px;
+	font-family:"黑体";
+	font-size:36px;
+}
+ul.style_a{
+	margin-top:25px;
+	margin-left:120px;
+	list-style:none;
+	overflow:hidden;
+} 
+ul.style_a li{
+	float:left;
+	margin-left:10px;
+}
+ul.style_a li a{
+	background:#fff;
+	border:1px solid #000;
+	width:39px;
+	height:33px;
+	line-height:33px;
+	color:#000;
+	text-align:center;
+	display:block;
+	font-size:24px;
+	text-decoration:none;
+	vertical-align:middle;
+}
+ul.style_a li.current a{
+	width:39px;
+	height:33px;
+	line-height:33px;
+	color:#fff;
+	background:#09F;
+	margin-top:-2px;
+	position:relaytive;
+}
+.banner .right{/*焦点栏右侧方块*/
+	margin:0px;
+	padding:0px;
+	width:202px;
+	height:530px;
+	background:url(../images/index/banner/banner_right.png) no-repeat ;
+	float:right;
+	position:relative;/*相对定位*/
+}
+.content_right{/*焦点栏右侧内的内容方块*/
+	position: absolute;/*绝对定位*/
+	top:8px;     /*距离顶部距离*/
+	left:11px;    /*距离左侧距离*/
+	color:#FFF;   /*字体颜色*/
+	width:188px;   
+	height500px;
+}
+.cl{/*焦点栏右侧内容具体样式*/
+	clear:both;
+	margin-top:10px;
+	margin-right:3px;
+	text-indent:0em;
+	font-size:36px;
+	font-family:"华文行楷";
+	line-height:40px;
+}
+/*banner end*/
+
+/*stages begin*/
+.stages{/*通知滚动栏*/
+	margin:0px auto;
+	padding:0px;
+	height:30px;
+	width:1500px;
+	line-height:30px;
+	border:3px solid #999;  /*定义外边框*/
+	vertical-align:middle;
+	text-align:left;
+	overflow:hidden;
+}
+.stages_title{/*通知公告标题*/
+	background-color:#999;
+	width:150px;
+	text-align:center;
+	border-right:3px solid #39f;  /*通知公告右边框*/
+	float:left;
+	font-weight:bold;
+	font-size:30px;
+	color:#000;   
+}
+.stages_con{/*通知公告内容方块*/
+	width:1000px;
+	float:left;
+}
+.stages_con ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+.stages_con ul li{
+	float:left;
+}
+
+.stages_con ul li a{/*滚动内容样式*/
+	background:#FFF;
+	padding:0px 0px 0px 8px;
+	margin:0px 40px 0px 0px;
+	width:3px;
+	height:5px;
+	line-height:30px;
+	vertical-align:middle;
+	color:#000;
+	font-size:26px;
+}
+/*stages end*/
+
+/*content begin*/
+/*主体内容区域*/
+.content{/*定义主体内容大方块*/
+	margin:15px auto 0px auto;
+	padding-bottom:15px;
+	width:1500px;
+}
+.line1{/*主体内容上部分方块*/
+	margin:0px;
+	padding:0px;
+	overflow:hidden;
+}
+.line1 .left{/*上部分左侧*/
+	margin:0px;
+	padding:0px;
+	width:300px;
+	float:left;
+}
+
+.line1 .left .module{/*上部分左侧代表作品区域*/
+	margin:0px;
+	padding:0px;
+	width:300px;
+	height:300px;
+	overflow:hidden;
+}
+
+.module .title{/*代表作品标题框样式*/
+	margin:0px;
+	padding:0px;
+	width:300px;
+	height:35px;
+}
+
+.module,.title_left{/*标题框左侧小方块*/
+	margin:0px;
+	padding:0px;
+	float:left;
+	width:20px;
+	height:35px;
+	background:#39F;
+}
+
+.module,.title_right{/*标题框右侧大方块内容样式*/
+	margin:0px;
+	padding:0px;
+	float:left;
+	width:280px;
+	height:35px;
+	background:#666 repeat-x;
+	text-align:left;
+	line-height:35px;
+	vertical-align:middle;
+	color:#fff;
+	font-family:"黑体";
+	font-weight:bold;
+	font-size:36px;
+	overflow:hidden;
+}
+
+.module,.title_bottom{/*标题"代表作品"底部样式*/
+	clear:both;/*清除浮动影响*/
+	background:#CCC;
+	width:300px;
+	height:12px;
+}
+
+.module,.module_con{/*代表作品内容框*/
+	margin:1px;
+	padding:0px 0px;
+	_padding:12px 12px;
+	text-align:left;
+	overflow:hidden;
+}
+.module,.module_con ul{
+	margin:10px;
+	padding:0px;
+	list-style:none;
+}
+.module,.module_con ul li{
+	width:250px;
+	height:30px;
+	margin:5px;
+	background:url(../images/index/module_li.png);
+	float:left;
+	display:inline;
+	font-weight:bold;
+}
+.module,.module_con ul li span{/*内容里蓝色小块*/
+	float:left;
+	background:#36F;
+	width:10px;
+	height:10px;
+	display:inline;
+	margin:6px 0 0 6px;
+}
+.module,.module_con ul li a{/*代表作品内容具体样式*/
+	width:150px;
+	height:30px;
+	display:inline;
+	text-align:center;
+	line-height:30px;
+	vertical-align:middle;
+	color:#000;
+	font-size:24px;
+	margin-left:30px;
+}
+
+
+.module,.module_con ul li a:link,a:visited{/*未访问和访问后*/
+	color:#000;
+	text-decoration:none;/*清楚超链接默认的下划线*/
+}
+
+.module,.module_con ul li a:hover{/*鼠标悬停*/
+	color:#39F;
+	text-decoration:underline;/*鼠标悬停时出现下划线*/
+}
+
+.module,.module_con ul li a:active{/*鼠标点击不动*/
+	color:#F00;
+}
+
+
+.prize{/*个人奖项区域*/	
+	margin:15px 0px;
+	padding:0px;
+}
+/*个人奖项主体内容样式*/
+.prize_con{
+	margin:0px;
+	padding:8px 0px 16px 15px;
+	text-align:left;
+}
+.prize_con ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+.prize_con ul li{
+	width:250px;
+	height:100px;
+	background:#CCC;
+	float:left;
+	display:inline;
+	font-weight:bold;
+	margin:3px 0px;
+	padding:0px;
+}
+.prize_con ul li span{
+	background:url(../images/index/prize_span.svg) no-repeat 0 0;
+	width:40px;
+	height:40px;
+	float:left;
+	display:inline;
+	margin-right:13px;
+}
+.prize,.prize_con ul li a{/*奖项具体内容样式*/
+	width:200px;
+	height:30px;
+	display:inline;
+	text-align:right;
+	line-height:30px;
+	vertical-align:middle;
+	color:#000;/*字体颜色*/
+	font-size:24px;
+	margin-left:30px;
+}
+/*主体内容左区域 end*/
+
+/*主体内容中心区域*/
+.center{/*center begin*/
+	margin:0px 0px 0px 12px;
+	padding:0px;
+	float:left;
+	text-align:left;
+	width:900px;
+	overflow:hidden;
+}
+
+.center.message{
+	margin:0px;
+	padding:0px;
+}
+.message_title{/*message标题框样式*/
+	margin:0px;
+	padding:0px 0px 0px 10px;
+	width:888px;
+	height:35px;
+	border:0px;/*清除上左右外边框*/
+	border-bottom:12px solid #CCC;/*定义灰色底部边框样式*/
+	line-height:35px;
+	background-color:#666;
+	vertical-align:middle;
+	overflow:hidden;
+}
+.m_title_left{
+	float:left;
+}
+
+.message_title a{/*message标题内容样式*/
+	color:#FFF;
+	font-size:36px;
+	font-weight:bold;
+	font-family:"黑体";
+	height:34px;
+	line-height:34px;
+	vertical-align:middle;
+	text-decoration:none;
+}
+
+.message_title .more a{/*标题more样式*/
+	width:40px;
+	height:40px;
+	display:block;
+	float:right;
+	margin:0px 0px 0px 0px;
+	display:inline;
+	padding:0px;
+}
+.message_con{/*message主体内容区域*/
+	margin:10px;
+	padding:30px 0px 12px 17px;
+	overflow:hidden;
+}
+.message_left{/*图片框区域*/
+	background:#FFF;
+	width:170px;
+	height:260px;
+	float:left;
+}
+.message_right{/*信息栏区域*/
+	float:left;
+	margin:2px 2px 2px 14px;
+	padding:0px 13px 0px 0px;
+	width:650px;	
+}
+.message_right ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+.message_right ul.left_ul{
+	float:left;
+	margin:0px;
+	padding:0px;
+}
+.message_right ul.left_ul li.message_right ul.right_ul li{
+	line-height:26px;
+}
+
+.message_right ul,.right_ul li p{/*message_right里p的样式*/
+	color:#FFF;
+	font-size:28px;
+	font-weight:bold;
+	font-family:"微软雅黑";
+}
+.message_right ul.right_ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	float:right;
+}
+
+.live{/*海报框样式*/
+	margin:5px auto;
+	padding:10px 0px 12px 0px;
+	overflow:hidden;
+	text-align:center;
+}
+
+.live_title{/*live标题框样式*/
+	margin:0px;
+	padding:0px 0px 0px 10px;
+	width:888px;
+	height:35px;
+	border:0px;
+	border-bottom:12px solid #CCC;
+	line-height:35px;
+	background-color:#666;
+	vertical-align:middle;
+	overflow:hidden;
+}
+.l_title_left{
+	float:left;
+}
+
+.live_title a{/*live标题内容样式*/
+	color:#FFF;
+	font-size:36px;
+	font-weight:bold;
+	font-family:"黑体";
+	height:34px;
+	line-height:34px;
+	vertical-align:middle;
+	text-decoration:none;
+}
+
+.live_poster{
+	width:880;
+	margin:20px 10px 10px 10px;
+	position:relative;/*相对定位*/
+	font-size:24px;
+
+}
+
+.poster1{
+	width:880;
+	font-size:28px;
+	color:#FFF;
+	font-family:"华文琥珀";
+}
+
+.poster2{/*海报框样式*/
+	float:left;
+	margin:10px 0px 0px 2px;
+	padding:0;
+	width:290px;
+	font-size:28px;
+	font-family:"华文琥珀";	
+}
+
+.poster2 p a{
+	color:#FFF;
+	font-size:28px;
+	font-family:"华文琥珀";
+}
+
+/*right begin*/
+.line1 .right{
+	margin: 0px;
+	padding: 0px;
+	width: 280px;
+	float: right;
+}
+.point{
+	margin: 0px;
+	padding: 0px;
+	width: 280px;
+	float: right;
+	height:529px;
+}
+	
+.point_title{/*point标题样式*/
+	margin:0px;
+	padding:0px 0px 0px 10px;
+	width:280px;
+	height:35px;
+	border:0px;
+	border-bottom:12px solid #CCC;
+	line-height:35px;
+	background-color:#666;
+	vertical-align:middle;
+	overflow:hidden;
+}
+
+
+.point_title a{/*point标题内容样式*/
+	color:#FFF;
+	font-size:36px;
+	font-weight:bold;
+	font-family:"黑体";
+	height:34px;
+	line-height:34px;
+	vertical-align:middle;
+	text-decoration:none;
+}
+
+.point ul{
+	list-style:none;
+}
+.point ul li{
+	width:203px;
+	height:60px;
+	border:1px solid #999;
+	margin-bottom:10px;
+	background:#FFF;
+}
+
+.point ul li a{
+	display:block;
+	height:40px;
+	border-left:15px solid #0080ab;
+	margin-top:10px;
+	line-height:40px;
+	padding-left:15px;
+	margin-left:-1px;
+	font-weight:bold;
+	color:#535353;
+	text-decoration:none;
+	font-size:28px;
+}
+/*point end*/
+
+.friend{
+	margin:0px;
+	padding:0px;
+	width:280px;
+	float:right;
+	background:#CCC;
+}
+.friend_title{/*friend标题样式*/
+	margin:0px;
+	padding:0px 0px 0px 10px;
+	width:280px;
+	height:35px;
+	border:0px;
+	border-bottom:12px solid #CCC;
+	line-height:35px;
+	background-color:#666;
+	vertical-align:middle;
+	overflow:hidden;
+}
+
+.friend_title a{/*friend标题内容样式*/
+	color:#FFF;
+	font-size:36px;
+	font-weight:bold;
+	font-family:"黑体";
+	height:34px;
+	line-height:34px;
+	vertical-align:middle;
+	text-decoration:none;
+}
+
+.friend_con{
+	width:280;
+	margin:20px 10px 10px 10px;
+	font-size:24px;
+}
+
+.friend1{
+	width:275;
+}/*right end*/
+
+.bottom{
+	width:1500px;
+	background:#666;
+	clear:both;
+	padding-bottom:35px;
+}
+/*content end*/
+
+
+
+
+
+
+
+
+
+
+	
+
+
+	

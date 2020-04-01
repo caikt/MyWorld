@@ -1,0 +1,30 @@
+/* CSS Document */
+body{
+	background:url(../images/begin/timg.jpg);
+	background-position: center;
+	background-attachment:fixed;
+	background-repeat:no-repeat ;
+	background-size:100% 100%;
+}
+
+h1{
+	text-align:center;
+	margin-top:auto;
+	list-style:none;
+}
+a{
+	color:#FFF;
+	font-family:"华文楷体";
+	font-size:60px;
+}
+a:link,a:visited{
+	text-decoration:none;
+}
+
+a:hover{
+	color:#36F;
+	text-decoration:underline;
+}
+a:active{
+	color:#F00;
+}

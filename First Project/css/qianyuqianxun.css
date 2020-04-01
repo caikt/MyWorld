@@ -1,0 +1,127 @@
+/* CSS Document */
+/*主体内容区域*/
+body{
+	background:url(../images/qianyuqianxun/background.jpg);
+	background-position: center;
+	background-attachment:fixed;
+	background-repeat:no-repeat ;
+	background-size:100% 100%;
+}
+
+.content{/*定义主体内容大方块*/
+	margin:15px auto 0px auto;
+	padding-bottom:15px;
+	width:1500px;
+}
+.line1{/*主体内容上部分方块*/
+	margin:0px;
+	padding:0px;
+	overflow:hidden;
+}
+
+.line1 .point{/*上部分顶部导引区域*/
+	margin:0px;
+	padding:0px;
+	width:1500px;
+	height:35px;
+	overflow:hidden;
+	background:#CCC;
+}
+
+.point_con{/*导引栏内容区*/
+	margin:0px auto;
+	padding:0px;
+	width:800px;
+}
+.point_con ul{
+	margin:0px 0px 0px 15px;
+	padding:0px;
+	width:1000px;
+	list-style:none;
+}
+.point_con ul li{
+	margin:0px 30px 0px 0px;
+	padding:0px;
+	float:left;
+}
+.point_con ul li a{
+	color:#000;      
+	font-family:"微软雅黑";
+	font-size:22px;
+	font-weight:bold;
+	padding:0px 13px;
+	float:left;
+	cursor:pointer;
+	text-decoration: none;
+}
+
+.point ul li span{/*定义点击效果*/
+	height:35px;
+	width:12px;
+	float:left;
+}
+.point ul li:hover a{
+	background:#C80000;
+	height:35px;
+	margin:-3px 0 0 0;
+	padding-top:3px;
+	float:left;
+	color:#fff;
+}
+.point ul li:hover span{
+	display:block;
+	background:#FFF  bottom;
+	height:35px;
+	width:12px;
+	float:left;
+	margin:-3px 0 0 0;
+}
+
+.main{
+	width:1000px;
+	margin:15px 250px 0px 250px;
+}
+
+.banner{
+	width:970px;
+	height:500px;
+	background:url(../images/qianyuqianxun/banner.jpg);
+	background-size:100% 100%;
+	margin:15px;
+	padding-top:10px;
+	position:relative;/*相对定位*/
+}
+
+.banner_con{
+	width:480;
+	float:left;
+	margin:0;
+	padding:0;
+	font-weight:bold;
+	font-size:40px;
+	color:#FFF;
+	font-family:"黑体";
+}
+
+.pic{
+	width:980px;
+	margin:10px;
+	border:8px solid #FFFFFF;
+}
+
+.text{
+	width:980px;
+	margin:0px 10px 10px 10px 10px;
+	padding:10px;
+	font-size:28px;
+	color:#FFF;
+	font-weight:bold;
+	font-family:"黑体";
+}
+
+.bottom{
+	width:1500px;
+	background:#666;
+	clear:both;
+	padding-bottom:35px;
+}
