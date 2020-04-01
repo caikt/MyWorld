@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>春来班二期web项目实训--echarts可视化运用</title>
+		<script src="js/echarts.min.js"></script><!---->
+		<script src="js/china.js"></script><!---->
+		<style type="text/css">
+			body{
+				background:url(img/pic01.JPG);
+				background-position: center;
+				background-attachment:fixed;
+				background-repeat:no-repeat ;
+				background-size:100% 100%;
+			}
+			.p{
+				width: 800px;
+				height: 650px;
+				border: 1px solid black;
+				margin: 3% auto;
+				background-color:rgba(255,255,255,.8) ;
+			}
+			#anniu{
+				display:none;
+				margin: 0 auto;
+			}
+			#footer {
+				margin:10px 0 0 0;
+				text-align: center;
+				background-color:rgba(255,255,255,.8);
+				clear:both;
+				padding:20px 0;
+				font-family:"微软雅黑";
+			}
+		</style>
+	</head>
+	<body>
+		<div id="guoqi" style="float: left;margin-left: 50px;"><img src="img/China.gif" width="288px" height="192px" ></div>
+		<div id="title" style="width: 800px;height: 200px;border:1px none;margin: 1% auto;text-align: center;">
+			<h2>2015-2019年中国国内生产总值（GDP）<br/> 2015-2019 China's GDP</h2>
+			<h4>数据来源于--国家数据网(中华人民共和国国家统计局)<a href="http://data.stats.gov.cn/index.htm">http://data.stats.gov.cn/</a></h4>
+			<h4>Data from National Bureau of Statistics of China<a href="http://data.stats.gov.cn/index.htm">http://data.stats.gov.cn/</a></h4>
+			<span style="background-color:white;width: 400px;text-align: center;font-size: 20px;">达内教育春来班二期web项目实训项目--蔡凯涛</span>
+		</div>
+		<hr width="80%"/>
+		<div id="bar" class="p"></div>
+		<div id="line" class="p"></div>
+		<div id="pie" class="p"></div>
+		<div id="map" class="p"></div>
+		<div style="width: auto;height: 50px;margin: 0 auto;border: 1px none;">
+			<input id="anniu" type="button" value="返回中国地图首页" onclick="backToChina()"/>
+		</div>
+		<div id="footer">
+				<p style="font-size:18px">
+					&copy;广大松田：软件工程专业 ：蔡凯涛制作 <br />
+					<a href="http://www.tedu.cn/">达内教育官网</a>
+				</p>  
+			</div>
+		<script>
+			var myChartBar = echarts.init(document.getElementById("bar"));
+			var optionBar = {
+				title:{
+						text:"2015-2019年国内生产总值（GDP）",
+						x:"center",
+						y:"bottom"
+				},
+				tooltip:{
+					show:true
+				},
+				dataZoom:[
+				{
+					type:"inside"
+				},
+				{
+					type:"slider"
+				}
+				],
+				legend:{
+					icon:"circle"
+				},
+				series:[
+				{
+					name:"国民总收入（亿元）",
+					type:"bar",
+					data:[686255.7,743408.3,831381.2,915887.3,988458.0]
+				},
+				{
+					name:"国内生产总值（亿元）",
+					type:"bar",
+					data:[688858.2,746395.1,832035.9,919281.1,990865.0]
+				},
+				{
+					name:"人均国内生产总值（亿元）",
+					type:"bar",
+					data:[50237,54139,60014,66006,70892]
+				}],
+				xAxis:{
+					type:"category",
+					data:["2015年","2016年","2017年","2018年","2019年"]
+				},
+				yAxis:{
+					type:"value"
+				}
+			};
+			myChartBar.setOption(optionBar);
+		</script>
+		<!-- 折线图 -->
+		<script>
+			var myChartLine = echarts.init(document.getElementById("line"));
+			var optionLine = {
+				title:{
+					text:"三大产业对GDP贡献率折线图",
+					x:"center",
+					y:"bottom"
+				},
+				series:[
+				{
+					name:"第一产业贡献率(‰)",
+					type:"line",
+					data:[4.4,4.6,4.0,4.4]
+				},
+				{
+					name:"第二产业贡献率(‰)",
+					type:"line",
+					data:[39.7,36.0,34.2,34.4]
+				},
+				{
+					name:"第三产业贡献率(‰)",
+					type:"line",
+					data:[55.9,60.0,61.1,61.5],
+				}
+				],
+				dataZoom:[
+				{
+					type:"inside"
+				},
+				{
+					type:"slider"
+				}
+				],
+				tooltip:{
+					trigger:"axis",
+				},
+				legend:{},
+				xAxis:{
+					type:"category",
+					data:["2015年","2016年","2017年","2018年"]
+				},
+				yAxis:{
+					name:"各产业对GDP的贡献率(%)",
+					type:"value",
+
+				}
+			};
+			myChartLine.setOption(optionLine);
+		</script>
+		<script>
+			var myChartPie = echarts.init(document.getElementById("pie"));
+			var optionPie = {
+				title:{
+					text:"2015-2019年三大产业增加值比例图",
+					x:"center",
+					y:"bottom"
+				},
+				legend: {},
+			    tooltip: {formatter:"{a}：占{d}%"},
+				label:{
+					formatter:"{a}\n{b}"
+				},
+			    dataset: {
+			        source:[
+			            ['年份', '2015', '2016', '2017', '2018', '2019'],
+			            ['第一产业', 57774.6,60139.2,62099.5,64745.2,70467.0],
+			            ['第二产业', 281338.9,386165.0,295427.8,331580.5,364835.2],
+						['第三产业', 349744.7,390828.1,438355.9,489700.8,534233.0]
+			        ]
+			    },
+			    series: [{
+					type: 'pie',
+					roseType: 'area',
+			        radius: 60,
+			        center: ['26%', '20%'],
+					encode: {
+					    itemName: '年份',
+					    value: '2015'
+					},
+					name:"2015年"
+			    }, {
+			        type: 'pie',
+			        roseType: 'area',
+			        radius: 60,
+			        center: ['77%', '20%'],
+			        encode: {
+			            itemName: '年份',
+			            value: '2016'
+			        },
+					name:"2016年"
+			    }, {
+			        type: 'pie',
+			        roseType: 'area',
+			        radius: 60,
+			        center: ['26%', '80%'],
+			        encode: {
+			            itemName: '年份',
+			            value: '2017'
+			        },
+					name:"2017年"
+			    }, {
+			        type: 'pie',
+			        roseType: 'area',
+			        radius: 60,
+			        center: ['77%', '80%'],
+			        encode: {
+			            itemName: '年份',
+			            value: '2018',
+					},
+					name:"2018年"
+			    }, {
+			        type: 'pie',
+			        roseType: 'radius',
+			        radius: 70,
+			        center: ['50%', '52%'],
+			        encode: {
+			            itemName: '年份',
+			            value: '2019'
+			        },
+					name:"2019年",
+					tooltip:{
+					formatter:"{a}：占{d}%"
+					}
+			    }]
+			};
+			myChartPie.setOption(optionPie);
+		</script>
+		<!-- 地图 -->
+		<textarea id="txt" hidden>
+		1 广东 107671.07
+		2 江苏 99631.52
+		3 山东 71067.50
+		4 浙江 62352.00
+		5 河南 54259.20
+		6 四川 46615.82
+		7 湖北 45828.31
+		8 福建 42395.00
+		9 湖南 39752.12
+		10 上海 38155.32
+		11 安徽 37114.00
+		12 北京 35371.30 
+		13 河北 35104.50
+		14 陕西 25793.17 
+		15 辽宁 24909.50
+		16 江西 24757.50 
+		17 重庆 23605.77
+		18 云南 23223.75
+		19 广西 21237.14
+		20 内蒙古 17212.50 
+		21 山西 17026.68
+		22 贵州 16769.34
+		23 天津 14104.28
+		24 新疆 13780.00
+		25 黑龙江 13612.70
+		26 吉林 11726.80
+		27 甘肃 8718.30
+		28 海南 5308.94
+		29 宁夏 3748.48
+		30 青海 2965.95
+		31 西藏 1600.00</textarea>
+		<textarea id="province" hidden>																														
+		name.1=北京(BeiJing)
+		name.2=上海(ShangHai)
+		name.3=天津(TianJin)
+		name.4=重庆(ChongQing)
+		name.5=香港(XiangGang)
+		name.6=澳门(Aomen)
+		name.7=安徽(AnHui)
+		name.8=福建(FuJian)
+		name.9=广东(GuangDong)
+		name.10=广西(GuangXi)
+		name.11=贵州(GuiZhou)
+		name.12=甘肃(GanSu)
+		name.13=海南(HaiNan)
+		name.14=河北(HeBei)
+		name.15=河南(HeNan)
+		name.16=黑龙江(HeiLongJiang)
+		name.17=湖北(HuBei)
+		name.18=湖南(HuNan)
+		name.19=吉林(JiLin)
+		name.20=江苏(JiangSu)
+		name.21=江西(JiangXi)
+		name.22=辽宁(LiaoNing)
+		name.23=内蒙古(NeiMengGu)
+		name.24=宁夏(NingXia)
+		name.25=青海(QingHai)
+		name.26=陕西(ShanXi1)
+		name.27=山西(ShanXi)
+		name.28=山东(ShanDong)
+		name.29=四川(SiChuan)
+		name.30=台湾(TaiWan)
+		name.31=西藏(XiZang)
+		name.32=新疆(XinJiang)
+		name.33=云南(YunNan)
+		name.34=浙江(ZheJiang)
+		</textarea>
+		<script>
+			var data = document.getElementById("txt")
+			.innerHTML.split("\n").map(function(item){
+			return ({name:item.split(" ")[1],value:item.split(" ")[2]})
+			});
+			console.log(data);
+			//先对省份名称数据进行处理
+			var datapro = document.getElementById("province")
+			.innerHTML.split("\n");//通过换行切割出来一个数组
+			var proobj = new Object();//创建一个省份名称对象
+			for(var item of datapro){//利用for of遍历数组
+				var start = item.indexOf("=")+1;
+				var end = item.indexOf("(");
+				var hz = item.slice(start,end);//slice()切割字符串 返回新的字符 汉字内容
+				var py = item.slice(item.indexOf("(")+1,item.indexOf(")")).toLowerCase();
+				proobj[hz]=py;
+			}
+		</script>
+			<script>
+			var myChartMap = echarts.init(document.getElementById("map"));
+			var optionMap = {
+				title:{
+					text:"2019年全国各省份GDP地图",
+					x:"center"
+				},
+				series:{
+					name:"",
+					type:"map",
+					map:"china",
+					roam:true,
+					data:data,
+					label:{
+						show:true
+					}
+				},
+				tooltip:{
+					formatter:"{b}<br>GDP总量：{c}亿元"
+				},
+				visualMap: {
+					min: 110000,
+					max: 1000,
+					text: ['High', 'Low'],
+					realtime: false,
+					calculable: true,
+					inRange: {
+						color: ['lightskyblue', 'yellow', 'orangered']
+					}
+				}
+			};
+			myChartMap.setOption(optionMap);
+			myChartMap.on("mousedown",function(parames){
+				var script = document.createElement("script");
+				script.src = "js/province/"+proobj[parames.name]+".js";
+				document.body.appendChild(script);
+			});
+			myChartMap.on("mouseup",function(parames){
+				optionMap.series.map = parames.name;
+				myChartMap.setOption(optionMap,true);
+				document.getElementById("anniu").style.display = "block";
+			});
+			function backToChina(){
+				document.body.lastElementChild.remove();
+				optionMap.series.map = "china";
+				myChartMap.setOption(optionMap,true);
+				document.getElementById("anniu").style.display = "none";
+			}
+		</script>
+	</body>
+</html>
